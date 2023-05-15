@@ -1,0 +1,14 @@
+{% extends "base.j2" %}
+
+{% block content %}
+<h3>{{ user.username }}'s Page</h3>
+
+{% for collect in user.collections%}
+    <p>{{ collect.name}}</p>
+    <p>{{ collect.description}}</p>
+    <p>{{ collect.comics_appeared_in}}</p>
+    <p>{{ collect.super_power}}</p>
+    <p><small>{{ collect.timestamp }}</small></p>
+
+{% endfor %}
+{% endblock  %}

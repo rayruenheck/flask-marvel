@@ -1,0 +1,30 @@
+{% extends "base.j2" %}
+
+{% block content %}
+    <h2>Collection</h2>
+    <form method="post" novalidate>
+    {{ form.hidden_tag()}}
+    <p>
+        {{form.name.label}}<br>
+        {{form.name(size=32)}}
+    </p>
+  
+    <p>
+        {{form.description.label}}<br>
+        {{form.description(size=32)}}
+    </p>
+  
+    <p>
+        {{form.comics.label}}<br>
+        {{form.comics(size=32)}}
+    </p>
+  
+    <p>
+        {{form.superpower.label}}<br>
+        {{form.superpower(size=32)}}
+    </p>
+  
+    <p>{{form.submit()}}</p>
+    </form>
+
+{% endblock content %}

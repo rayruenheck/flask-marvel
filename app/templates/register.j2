@@ -1,0 +1,33 @@
+{% extends "base.j2" %}
+
+{% block content %}
+    <h3>Greetings Hero! Create Your Account With Us</h3>
+
+    <form method="POST" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.your_superhero_name.label}}<br>
+            {{ form.your_superhero_name(size=32) }}
+        </p>
+        
+        <p>
+            {{ form.username.label}}<br>
+            {{ form.username(size=32) }}
+        </p>
+        
+        <p>
+            {{ form.email.label}}<br>
+            {{ form.email(size=32) }}
+        </p>
+        
+        <p>
+            {{ form.password.label}}<br>
+            {{ form.password(size=32) }}
+        </p>
+        <p>
+            {{ form.submit() }}
+        </p>
+    
+    </form>
+
+{% endblock content %}
